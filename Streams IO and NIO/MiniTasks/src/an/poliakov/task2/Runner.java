@@ -5,16 +5,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Задание: напишите Java-программу для получения определенных файлов по расширениям из указанной папки
+ * Задание: напишите Java-программу для получения определенных файлов по расширениям из указанной директории
+ * а так же выведите размер в байтах/килобайтах/мегабайтах!
  *
  *
  * **/
 public class Runner {
     public static void main(String[] args) {
-        ArrayList<String> filesWithExpansion = analyze(getPathInSystem(), getSearchExpansion());
+        ArrayList<File> filesWithExpansion = analyze(getPathInSystem(), getSearchExpansion());
         filesWithExpansion.stream().
                 filter(n->n != null).
-                forEach(n-> System.out.println(n));
+                forEach(n-> System.out.println(
+                        "Name file: " + n.getName() + " [" + n.length() + " -byte][" + (n.length()/1024) + " -kb][" + (n.length()/(1024*1024)) + " -mb]"
+                ));
     }
 
     //Получение из консоли пути для поиска
@@ -35,13 +38,13 @@ public class Runner {
     }
 
     //Поиск в директории файлов с нужным расширением
-    private static ArrayList <String> analyze(File file, String expansion){
-        ArrayList <String> listFileWithExpansion = new ArrayList<>();
+    private static ArrayList <File> analyze(File file, String expansion){
+        ArrayList <File> listFileWithExpansion = new ArrayList<>();
 
-        String[] list = file.list();
-        for(int i = 0; i < list.length; i++){
-            if(list[i].endsWith(expansion)){
-                listFileWithExpansion.add(list[i]);
+        File[] files = file.listFiles();
+        for(int i = 0; i < files.length; i++){
+            if(files[i].getName().endsWith(expansion)){
+                listFileWithExpansion.add(files[i]);
             }
         }
 
