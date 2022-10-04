@@ -15,7 +15,7 @@ import java.util.Scanner;
  * Если необходимо как то работать с тем что внутри директории при помощи Path,
  * используем статический метод Files.walkFileTree()
  * **/
-public class Runnner {
+public class Runner {
     public static void main(String[] args) {
         Path path = getPathInSystem();
         showAllFilesUsePath(path);
