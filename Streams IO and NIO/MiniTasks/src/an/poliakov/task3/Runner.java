@@ -1,6 +1,9 @@
 package an.poliakov.task3;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * RandomAccessFile - класс позволяющий произвольно перемещаться по файлу (записывать и
@@ -13,6 +16,9 @@ import java.io.File;
 public class Runner {
     public static void main(String[] args) {
         File file = new File("src/an/poliakov");
+
+        List<Integer> list = new ArrayList<>();
+        Integer max = Collections.max(list);
 
         //вывод ВСЕГО по указанному пути
         String[] allList = file.list();
