@@ -8,21 +8,26 @@ public class Runner {
         System.out.println(getCount("abracadabra"));
     }
 
-    private static int getCount(String word) {
-        char [] masVowels = {'a','e','i','o','u'};
-        char[] charsWord = word.trim().toLowerCase().toCharArray();
-        int count = 0;
+    //stupid solution
+//    private static int getCount(String word) {
+//        char [] masVowels = {'a','e','i','o','u'};
+//        char[] charsWord = word.trim().toLowerCase().toCharArray();
+//        int count = 0;
+//
+//        if(charsWord.length > 0){
+//            for(char c : charsWord){
+//                for(char b : masVowels){
+//                    if(c == b){
+//                        count++;
+//                    }
+//                }
+//            }
+//        }
+//
+//        return count;
+//    }
 
-        if(charsWord.length > 0){
-            for(char c : charsWord){
-                for(char b : masVowels){
-                    if(c == b){
-                        count++;
-                    }
-                }
-            }
-        }
-
-        return count;
+    private static int getCount(String word){
+        return word.replaceAll("[^aeiou]","").length();
     }
 }
