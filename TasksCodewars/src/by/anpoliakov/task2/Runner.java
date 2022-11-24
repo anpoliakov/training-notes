@@ -27,6 +27,7 @@ public class Runner {
 //        return count;
 //    }
 
+    //smart solution
     private static int getCount(String word){
         return word.replaceAll("[^aeiou]","").length();
     }
