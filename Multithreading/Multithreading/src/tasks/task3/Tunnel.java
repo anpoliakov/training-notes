@@ -13,6 +13,8 @@ public class Tunnel {
         this.store = new ArrayList<>();
     }
 
+    // по условию - если нет заданий (add,get) поток не должен работать
+    // по этому след методы работают циклично (add-stop-get-stop)
     public synchronized boolean add (Ship element){
         try {
             if (shipsCounter < maxShipsInTunel) {

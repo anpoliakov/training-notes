@@ -2,10 +2,12 @@ package tasks.task3;
 
 import java.util.Random;
 
+//занимается созданием кораблей и добавлением их в тонель
 public class ShipGenerator implements Runnable{
     private Tunnel tunnel;
     private int shipCount;
 
+    //всего будет создано shipCount кол-во кораблей
     public ShipGenerator(Tunnel tunnel, int shipCount) {
         this.tunnel = tunnel;
         this.shipCount = shipCount;

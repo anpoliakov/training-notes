@@ -18,7 +18,7 @@ public class Runner {
         File file = new File("src/an/poliakov");
 
         List<Integer> list = new ArrayList<>();
-        Integer max = Collections.max(list);
+        Collections.max(list)
 
         //вывод ВСЕГО по указанному пути
         String[] allList = file.list();
