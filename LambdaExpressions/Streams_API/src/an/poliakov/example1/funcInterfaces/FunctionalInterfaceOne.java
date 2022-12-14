@@ -1,6 +1,6 @@
 package an.poliakov.example1.funcInterfaces;
 
 @FunctionalInterface
-public interface FunctionalInterfaceOne {
-    void printStr(String str);
+public interface FunctionalInterfaceOne <T>{
+    void printStr(T str);
 }
