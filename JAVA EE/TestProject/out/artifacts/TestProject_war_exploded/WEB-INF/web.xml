@@ -5,26 +5,16 @@
          version="4.0">
     
     <welcome-file-list>
-        <welcome-file>testJsp.jsp</welcome-file>
+        <welcome-file>helloJsp.jsp</welcome-file>
     </welcome-file-list>
 
     <!-- Связывание адреса в браузере и конкретного севрлета -->
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>FirstServlet</servlet-class>
+        <servlet-class>logic.FirstServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern>/test-servlet</url-pattern>
-    </servlet-mapping>
-
-    <!-- Связывание адреса в браузере и конкретной JSP страницы -->
-    <servlet>
-        <servlet-name>FirstJsp</servlet-name>
-        <jsp-file>/FirstJsp.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>FirstJsp</servlet-name>
-        <url-pattern>/hello-world-jsp</url-pattern>
     </servlet-mapping>
 </web-app>
