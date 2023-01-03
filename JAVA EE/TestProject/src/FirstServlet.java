@@ -1,24 +1,26 @@
-import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/*
-* При старте приложения, Tomcat подгружает сервлеты в контейнер сервлетов и начинает обрабатывать запросы от клиентов
-* */
 public class FirstServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        String name = request.getParameter("name");
-        PrintWriter writer = response.getWriter();
- 
-        writer.println("<html>");
-        writer.println("Hello " + name + ", Good day!");
-        writer.println("</html>");
+        HttpSession session = request.getSession();
+        Integer count = (Integer) session.getAttribute("count");
 
-        RequestDispatcher dis = request.getRequestDispatcher("/testJsp.jsp");
-        dis.forward(request,response);
+        if(count == null){
+            session.setAttribute("count", 1);
+            count = 1;
+        }else{
+            session.setAttribute("count", count + 1);
+        }
+
+        PrintWriter writer = response.getWriter();
+        writer.println("<html>");
+        writer.println("<p> Your count is " + count + " </p>");
+        writer.println("</html>");
     }
 }
