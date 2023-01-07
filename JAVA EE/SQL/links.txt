@@ -1,0 +1,2 @@
+Про хранение паролей в БД
+https://habr.com/ru/company/acribia/blog/413157/
