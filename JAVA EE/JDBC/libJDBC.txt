@@ -1,0 +1,7 @@
+Способы загрузки jdbc драйвера сервера и др:
+http://java-online.ru/jdbc-drivermanager.xhtml
+
+Об классах JDBC and JDBC Manager 
+https://proselyte.net/tutorials/jdbc/introduction/
+
+http://java-online.ru/jdbc-statement.xhtml
