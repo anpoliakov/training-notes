@@ -1,0 +1,21 @@
+http://java-online.ru/servlet-http.xhtml
+
+Servlet хорошо описана работа
+https://javarush.ru/groups/posts/2529-chastjh-5-servletih-pishem-prostoe-veb-prilozhenie
+
+JSTL библеотека
+https://ru.bmstu.wiki/JSTL_(JavaServer_Pages_Standard_Tag_Library)
+
+
+Всё о сервлетах (НЕ ОТКРЫЛОСЬ)
+http://www.javaportal.ru/java/articles/java_http_web/article05.html
+
+
+Redirect and Forward
+https://metanit.com/java/javaee/4.4.php
+
+Аннотации для Java EE:
+https://coderlessons.com/tutorials/java-tekhnologii/uchit-servlety/servlety-annotatsii
+
+Отличное описание запроса и ответа:
+https://developer.mozilla.org/ru/docs/Web/HTTP/Messages
